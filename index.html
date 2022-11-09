@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title>Save the planet</title>
+		<link rel="stylesheet" href="estilos.css">
+		<link rel="manifest" href="./manifest.json" />
+		<script src="jscript.js"></script>
+		<script>
+			if ('serviceWorker' in navigator) {
+			  navigator.serviceWorker.register('./sw.js')
+				 .then(function () {console.log('service worker registered');})
+				 .catch(function () {console.log('service worker failed'); });
+			}
+		  </script>
+	</head>
+	<body>
+
+		<div id="painel">
+			Planeta
+			<div id="medidorPlaneta">
+				<div id="barraPlaneta"></div>
+			</div>
+			<div id="contBombas"></div>
+		</div>
+		<div id="naveJog" class="navJog"></div>
+		<div id="telaMsg" class="telaMsg">
+			<button id="btnJogar" class="btnJogar">Jogar</button>
+		</div>	
+		
+	</body>
+</html> 
